@@ -1,3 +1,12 @@
 from django.contrib import admin
+from.models import Expense 
 
-# Register your models here.
+
+
+
+class ExpenseAdmin(admin.ModelAdmin):
+    list_display=("user","date","amount","text") 
+    list_filter=("user","date")
+    list_editable=("text",)
+    list_display_links=("date",)
+    search_fields=("amount",)
