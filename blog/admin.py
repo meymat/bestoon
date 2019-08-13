@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Expense ,Income
+from.models import Expense ,Income , Token
 
 
 
@@ -26,3 +26,14 @@ class IncomeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Income,IncomeAdmin)
+
+
+
+class TokenAdmin(admin.ModelAdmin):
+    list_display=("user","token") 
+    list_filter=("user","token")
+#     
+    list_display_links=("token",)
+    search_fields=("user",)
+
+admin.site.register(Token,TokenAdmin)
