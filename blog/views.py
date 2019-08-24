@@ -145,3 +145,9 @@ def submit_income (request):
         'status':'ok',
 
     }, encoder=JSONEncoder)
+
+
+
+def index(request):
+    context = {}
+    return render (request,'index.html',context)
