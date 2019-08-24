@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+#baraye amoozesh nasb captchaye google be adress 
+# https://github.com/praekelt/django-recaptcha#local-development-and-functional-testing 
+# va hamchenin baraye gerftan site key az https://www.google.com/recaptcha/admin/create estefade mikonim
+# baraye gereftane site key dar ghesmate domain bayay localhost ya 127.0.0.1 ra vared mikonim
+
+
+RECAPTCHA_PUBLIC_KEY = '6LeOhrMUAAAAAPWJrXAxTrx-QI5Lm9vYIDhmxwme'
+RECAPTCHA_SECRET_KEY = '6LeOhrMUAAAAAGD3Rwp0KsJygSXjRuByLJ5DDguz'
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+
