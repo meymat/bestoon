@@ -20,7 +20,7 @@ cpplint==1.4.4
 decorator==4.4.0
 dennis==0.9
 dependency-management==0.4.0
-Django==2.2.3
+Django==2.2.13
 django-recaptcha==2.0.4
 docopt==0.6.2
 docutils==0.15.2
